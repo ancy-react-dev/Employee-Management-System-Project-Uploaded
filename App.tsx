@@ -1,7 +1,7 @@
 
 import { BrowserRouter, Routes, Route, Link, Navigate } from "react-router-dom";
 import Login from "./pages/Login";
-import Dashboard from "./components/Dashboard";
+
 import EmployeeList from "./pages/EmployeeList";
 import EmployeeForm from "./pages/EmployeeForm";
 import { useAppDispatch } from "./app/hooks";
