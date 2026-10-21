@@ -1,5 +1,6 @@
 
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Link, Navigate } from "react-router-dom";
+import Login from "./pages/Login";
 import Dashboard from "./components/Dashboard";
 import EmployeeList from "./pages/EmployeeList";
 import EmployeeForm from "./pages/EmployeeForm";
@@ -11,7 +12,7 @@ function NotFound() {
   return (
     <div>
       <h1>404 - Page Not Found</h1>
-      <Link to="/">Go to Dashboard</Link>
+     <Link to="/dashboard">Go to Dashboard</Link>
     </div>
   );
 }
@@ -22,13 +23,15 @@ function App() {
   return (
     <BrowserRouter>
       <nav>
-        <Link to="/">Dashboard</Link>{" | "}
+       <Link to="/dashboard">Dashboard</Link>
         <Link to="/employees">Employee List</Link>{" | "}
         <Link to="/employees/add">Add Employee</Link>
       </nav>
 
       <Routes>
-        <Route path="/" element={<Dashboard />} />
+        <Route path="/" element={<Navigate to="/login" replace />} />
+<Route path="/login" element={<Login />} />
+<Route path="/dashboard" element={<Dashboard />} />
         <Route path="/employees" element={<EmployeeList />} />
         <Route
           path="/employees/add"
