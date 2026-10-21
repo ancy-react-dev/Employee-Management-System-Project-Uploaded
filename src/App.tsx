@@ -1,7 +1,6 @@
 
 import { BrowserRouter, Routes, Route, NavLink, Link, Navigate } from "react-router-dom";
 import { useState } from "react";
-import Dashboard from "./components/Dashboard";
 import EmployeeList from "./pages/EmployeeList";
 import EmployeeForm from "./pages/EmployeeForm";
 import { useAppDispatch } from "./app/hooks";
