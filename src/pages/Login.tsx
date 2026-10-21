@@ -41,7 +41,7 @@ console.log("Login response:", response.status, data.message);
 
       sessionStorage.setItem("authToken", data.token);
       setMessage("Login successful!");
-      navigate("/");
+      navigate("/dashboard");
 
     } catch {
       setMessage("Cannot connect to the server. Please try again.");
