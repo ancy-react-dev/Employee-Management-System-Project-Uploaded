@@ -21,7 +21,7 @@ function App() {
     const dispatch = useAppDispatch();
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={import.meta.env.BASE_URL}>
       <nav>
        <Link to="/dashboard">Dashboard</Link>
         <Link to="/employees">Employee List</Link>{" | "}
